@@ -19,7 +19,7 @@ jobs:
         run: |
             docker build --tag nuc_data_maker .
             rm -rf h5_files
-            docker run -v /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}:/share nuc_data_maker /bin/bash -c "python data/convert_*****.py -d /share/h5_files -r ***** && pytest tests/test_xs_in_simulations.py"
+            docker run -v /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}:/share nuc_data_maker /bin/bash -c "python data/convert_*****.py -d /share/h5_files -r ***** && pytest -rP tests/test_xs_in_simulations.py"
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
