@@ -1,5 +1,8 @@
 name: process_test_h5_files
 on:  
+  push:    
+    branches:
+    - main
   pull_request:    
     branches:
     - main
