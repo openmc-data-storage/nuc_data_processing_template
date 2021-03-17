@@ -7,7 +7,6 @@ import openmc
 
 os.environ["OPENMC_CROSS_SECTIONS"] = '/share/h5_files/cross_sections.xml'
 
-
 class TestH5FilesInSimulations(unittest.TestCase):
 
     def test_simulation_runs_with_isotopes(self):
